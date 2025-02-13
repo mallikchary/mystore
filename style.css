@@ -1,0 +1,21 @@
+.cartblock{
+    background-color: silver;
+    width: 400px;
+    position: fixed;
+    top: 0px;
+    left: 70%;
+    height: 100%;
+    padding: 20px;
+    transition: 1s;
+}
+.container{
+    margin: 0;
+}
+.header{
+    display: flex;
+    background-color: beige;
+    justify-content: space-between;
+}
+.productblock{
+    background-color: bisque;
+}
