@@ -3,15 +3,28 @@
     width: 400px;
     position: fixed;
     top: 0px;
-    left: 70%;
+    left: 80%;
     height: 100%;
     padding: 20px;
     transition: 1s;
+}*{
+    margin: 0;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
 }
 .container{
     margin: 0;
 }
 .header{
+    padding: 10px;
     display: flex;
     background-color: beige;
     justify-content: space-between;
