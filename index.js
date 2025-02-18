@@ -19,8 +19,9 @@
         showCart()
 
       }
+      let total=0;
       const showtotal=()=>{
-        let total=products.reduce((sum,value)=>{
+        total=products.reduce((sum,value)=>{
             if(cart[value.id]){
             return sum+value.price*cart[value.id]
             }
@@ -36,7 +37,7 @@
             str += `
             <li>${value.name}-$${value.price}-<button onclick=decrement(${value.id})>-</button>${cart[value.id]}<button onclick=increment(${value.id})>+</button>-${value.price*cart[value.id]}</li>
             
-          <button onclick="placeorder(">PlaceOrder</button>
+          <button onclick="placeorder()">PlaceOrder</button>
             `;
           }
         });
@@ -156,10 +157,11 @@
         divProducts.innerHTML = str+"</div>";
       })
       };
-      const placeorder=()=>{
+      const placeorder = () => {
         const obj={
-          customer:"abc@gmail.com",
-          ordervalue:100,
+          customer:user.email,
+          items:cart,
+          ordervalue:total,
           status:"pending"
         };
         orders.push(obj)
