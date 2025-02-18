@@ -27,16 +27,16 @@ const showTotal = () => {
 };
 
 const showOrders = () => {
-  let str = "";
+  let str = "<div style='padding:30px'><h3>My Orders</h3>";
   orders.map((value) => {
     if (value.customer === user.email) {
       str += `
-      <li>
+      <div>
       ${value.customer}-
       ${value.orderValue}-
-      ${Object.keys(items).length}-
+      ${Object.keys(value.items).length}-
       ${value.status}-
-      </li>
+      </div>
       `;
     }
   });
@@ -47,7 +47,7 @@ const showMain = () => {
   let str = `
   <div class="container">
       <div class="header">
-        <h1>My Store</h1>
+        <h1>Welcome ${user.name}</h1>
         <div class='menu'>
          <li onclick='showProducts()'>Home</li>
           <li onclick='showOrders()'>Orders</li>
@@ -83,6 +83,8 @@ const placeOrder = () => {
   orders.push(obj);
   cart = {};
   showCart();
+  hideCart();
+  showOrders();
   console.log(orders);
 };
 
