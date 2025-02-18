@@ -36,7 +36,7 @@
             str += `
             <li>${value.name}-$${value.price}-<button onclick=decrement(${value.id})>-</button>${cart[value.id]}<button onclick=increment(${value.id})>+</button>-${value.price*cart[value.id]}</li>
             
-          <button onclick="placeorder()">PlaceOrder</button>
+          <button onclick="placeorder(">PlaceOrder</button>
             `;
           }
         });
