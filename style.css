@@ -1,57 +1,68 @@
-.cartblock{
-    background-color: silver;
-    width: 400px;
-    position: fixed;
-    top: 0px;
-    left: 80%;
-    height: 100%;
-    padding: 20px;
-    transition: 1s;
-}*{
-    margin: 0;
-}
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.box{
-    background-color: white;
-    margin: 10px;
-    border-radius: 20px;
-    padding: 10px;
-}
-.container{
-    margin: 0;
-}
-.header{
-    padding: 10px;
-    display: flex;
-    background-color: beige;
-    justify-content: space-between;
-}
-.productblock{
-    background-color: bisque;
+*{
+    margin: 0;  
+  }
+  .container {
+      margin: 0;
+  }
+  .header {
+      padding: 10px;
+      background-color:pink;
+      display: flex;
+      justify-content: space-between;
+  }
+  .productBlock{
+      background-color: silver;
+  }
+  .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  
+  }
+  .box {
+      background-color: white;
+      margin: 10px;
+      border-radius: 20px;
+      padding: 10px;
+  }
+  .cartBlock {
+      background-color: silver;
+      width: 300px;
+      position: fixed;
+      top:0px;
+      left:100%;
+      height: 100%;
+      padding: 20px;
+      transition: 2s;
+  }
+  
+  .login {
+      border: 1px solid black;
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
     
-}
-.login {
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10%;
-}
-.login input,button{
-    margin: 10px;
-    padding: 10px;
-}
-.reg{
-    border: 1px solid black;
-    text-align: center;
-    padding: 10px;
-    margin: 10%;
-}
-.reg input,button{
-    margin: 10px;
-    padding: 10px;
-}
+  }
+  
+  .login input,button{
+      margin: 10px;
+      padding: 10px;
+  }
+  
+  .registration {
+      border: 1px solid black;
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
+  
+  }
+  
+  .registration input,button{
+      margin: 10px;
+      padding: 10px;
+  }
+  
+  .menu li {
+      display: inline-block;
+      padding: 5px;
+  }
