@@ -12,6 +12,7 @@
 }
 .row{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .box{
@@ -31,4 +32,26 @@
 }
 .productblock{
     background-color: bisque;
+    
+}
+.login {
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10%;
+}
+.login input,button{
+    margin: 10px;
+    padding: 10px;
+}
+.reg{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    margin: 10%;
+}
+.reg input,button{
+    margin: 10px;
+    padding: 10px;
 }
