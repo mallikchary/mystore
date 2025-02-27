@@ -40,7 +40,9 @@
       border: 1px solid black;
       text-align: center;
       padding: 50px;
-      margin: 500px;
+      margin-left: 500px;
+      margin-right: 500px;
+      margin-top: 25px;
       width: auto;
     
   }
@@ -55,7 +57,9 @@
       border: 1px solid black;
       text-align: center;
       padding: 50px;
-      margin: 500px;
+      margin-left: 500px;
+      margin-right: 500px;
+      margin-top: 25px;
       width: auto;
   
   }
