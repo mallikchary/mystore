@@ -6,7 +6,7 @@
   }
   .header {
       padding: 10px;
-      background-color:beige;
+      background-color:orange;
       display: flex;
       justify-content: space-between;
   }
@@ -39,35 +39,27 @@
   .login {
       border: 1px solid black;
       text-align: center;
-      padding: 50px;
-      margin-left: 400px;
-      margin-right: 500px;
-      margin-top: 25px;
-      width: 400px;
+      padding: 100px;
+      margin: 10px;
     
   }
   
   .login input,button{
       margin: 10px;
       padding: 10px;
-      box-sizing: border-box;
   }
   
   .registration {
       border: 1px solid black;
       text-align: center;
-      padding: 50px;
-      margin-left: 400px;
-      margin-right: 500px;
-      margin-top: 25px;
-      width: 400px;
+      padding: 100px;
+      margin: 10px;
   
   }
   
   .registration input,button{
       margin: 10px;
       padding: 10px;
-      box-sizing: border-box;
   }
   
   .menu li {

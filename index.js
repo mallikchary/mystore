@@ -22,12 +22,11 @@ const showTotal = () => {
   total = products.reduce((sum, value) => {
     return sum + value.price * (cart[value.id] ? cart[value.id] : 0);
   }, 0);
-
   divTotal.innerHTML = `Order Value: $${total}`;
 };
 
 const showOrders = () => {
-  let str = "<div style='padding:30px'><h3>My Orders</h3>";
+  let str = "<div style='padding:30px'><h3>My Orders</h1>";
   orders.map((value) => {
     if (value.customer === user.email) {
       str += `
@@ -35,19 +34,19 @@ const showOrders = () => {
       ${value.customer}-
       ${value.orderValue}-
       ${Object.keys(value.items).length}-
-      ${value.status}-
+      ${value.status}
       </div>
       `;
     }
   });
-  divProducts.innerHTML = str;
+  divProducts.innerHTML = str + "</div>"
 };
 
 const showMain = () => {
   let str = `
   <div class="container">
       <div class="header">
-        <h1>Welcome ${user.name}</h1>
+        <h1>My Store</h1>
         <div class='menu'>
          <li onclick='showProducts()'>Home</li>
           <li onclick='showOrders()'>Orders</li>
@@ -82,8 +81,8 @@ const placeOrder = () => {
   };
   orders.push(obj);
   cart = {};
-  showCart();
-  hideCart();
+  showCart()
+  hideCart()
   showOrders();
   console.log(orders);
 };
@@ -120,11 +119,11 @@ function showLogin() {
   <div class='login'>
       <h2>Login Form</h2>
       <div id='msg'></div>
-      <p><input id="email" type="text"></p>
-      <p><input id="password" type="password"></p>
-      <button onclick='chkUser()'>Log In</button>
-      <p><button onclick='showForm()'>Create Account</button></p>
-  </div>
+       <p><input type="text" id="email" class="form-control placeholder="Email"></p>
+      <p><input type="password" id="password" class="form-control placeholder="password"></p>
+      <button onclick='chkUser()' class="btn btn-success">Log In</button>
+      <br>
+      <p><br><button onclick='showForm()'class="btn btn-primary">Create Account</button></p>
   `;
   root.innerHTML = str;
 }
@@ -132,12 +131,12 @@ function showLogin() {
 function showForm() {
   let str = `<div class='registration'>
   <h2>Registration Form</h2>
-  <p><input type="text" id="name" placeholder="Name"></p>
-  <p><input type="text" id="email" placeholder="Email"></p>
-  <p><input type="password" id="password" placeholder="Password"></p>
-  <p><input type="date" id="dob"></p>
-  <p><button onclick='addUser()'>Submit</button></p>
-  <p>Already a member?<button onclick='showLogin()'>Login Here</button></p>
+  <p><input type="text" id="name" class="form-control"placeholder="Name"></p>
+  <p><input type="text" id="email"class="form-control" placeholder="Email"></p>
+  <p><input type="password" id="password" class="form-control" placeholder="Password"></p>
+  <p><input type="date" id="dob"class="form-control"></p>
+  <p><button onclick='addUser()' class="btn btn-primary">Submit</button></p>
+  <p>Already a member?<button onclick='showLogin()' class="btn btn-success">Login Here</button></p>
   `;
   root.innerHTML = str + "</div>";
 }
@@ -183,11 +182,16 @@ const showProducts = () => {
       let str = "<div class='row'>";
       products.map((value) => {
         str += `
-          <div class='box'>
-          <h3>${value.name}</h3>
-          <p>${value.desc}</p>
-          <h4>$${value.price}</h4>
-          <button onclick=addToCart(${value.id})>Add to Cart</button>
+        <div class="col-md-4 mb-4 rounded p-3 m-3">
+            <div class="card">
+              <img src="${value.image}" class="card-img-top" alt="${value.name}">
+              <div class="card-body">
+                <h5 class="card-title">${value.name}</h5>
+                <p class="card-text">${value.desc}</p>
+                <h6 class="card-subtitle mb-2 text-muted">$${value.price}</h6>
+                <button class="btn btn-primary" onclick="addToCart(${value.id})">Add to Cart</button>
+              </div>
+            </div>
           </div>
           `;
       });
